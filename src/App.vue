@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <div>
-      <button @click="openDrawerMenu">ボタン</button>
+      <button @click="openDrawerMenu" class="button">ボタン</button>
     </div>
     <transition name="right">
       <div v-if="drawerFlg" class="drawer-menu-wrapper">
-        <div class="drawer-menu">めにゅー</div>
+        <div class="drawer-menu">Link1</div>
+        <div class="drawer-menu">Link2</div>
+        <div class="drawer-menu">Link3</div>
       </div>
     </transition>
   </div>
@@ -44,9 +46,21 @@ export default {
   right: 0;
   width: 50%;
   height: 100%;
-  background-color: skyblue;
+  background-color: black;
+  color: white;
+  font-size: 25px;
 }
 .drawer-menu {
   padding: 24px;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 </style>
